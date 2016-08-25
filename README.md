@@ -1,6 +1,6 @@
 # About Project
 一个Android授权操作工具套件，使用请参考https://github.com/Jay-Y/yApp.
-(An Android authorization tool suite,please refer to https://github.com/Jay-Y/yApp.)
+(An Android authorization tool suite,please refer to 'app' or [yApp]https://github.com/Jay-Y/yApp.)
 #### When you use Gradle to build a dependency can be added to:
 ```javascript
 compile 'com.github.jay-y:permission:1.0.0'
