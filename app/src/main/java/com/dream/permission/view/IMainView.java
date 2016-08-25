@@ -1,4 +1,4 @@
-package com.dream.test.view;
+package com.dream.permission.view;
 
 /**
  * Description: IMainView. <br>

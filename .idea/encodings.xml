@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gradle.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library/src/androidTest/java/org/yapp/ApplicationTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library/src/main/java/org/yapp/utils/permission" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library/src/main/java/org/yapp/utils/permission/PermissionError.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library/src/main/java/org/yapp/utils/permission/PermissionSuccess.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/library/src/main/java/org/yapp/utils/permission/PermissionUtil.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

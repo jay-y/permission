@@ -1,12 +1,12 @@
-package com.dream.test.presenter;
+package com.dream.permission.presenter;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 
-import com.dream.test.App;
-import com.dream.test.view.IMainView;
+import com.dream.permission.App;
+import com.dream.permission.view.IMainView;
 
 import org.yapp.core.presenter.BaseActivityPresenter;
 import org.yapp.core.ui.activity.BaseAppCompatActivity;
