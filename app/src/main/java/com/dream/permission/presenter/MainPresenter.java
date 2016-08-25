@@ -46,7 +46,6 @@ public class MainPresenter extends BaseActivityPresenter<BaseAppCompatActivity, 
                 } while (phoneCursor.moveToNext());
                 phoneCursor.close();
             }
-            showMsg("已授权");
         }else{
             PermissionUtil
                     .with(getContext())
