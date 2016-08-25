@@ -165,7 +165,7 @@ public class PermissionUtil {
     public PermissionUtil permissions(String[]... permissionsBase) {
         List<String> permissionList = new ArrayList<>();
         for (String[] permissions : permissionsBase) {
-            permissionList.addAll(permissionsToList(getContext(object), permissions));
+            permissionList.addAll(permissionsToList(permissions));
         }
         this.mPermissions = permissionList.toArray(new String[permissionList.size()]);
         return this;
@@ -253,7 +253,6 @@ public class PermissionUtil {
 
     /**
      * 请求权限结果
-     * TODO:不够准确
      *
      * @param obj
      * @param requestCode
@@ -270,19 +269,18 @@ public class PermissionUtil {
             }
         }
         if (permissionList.size() > 0) {
-
+            onError(obj, requestCode);
         } else {
             onSuccess(obj, requestCode);
         }
     }
 
-    @TargetApi(value = Build.VERSION_CODES.M)
-    public static List<String> permissionsToList(Context context, String... permission) {
-        List<String> denyPermissions = new ArrayList<>();
+    public static List<String> permissionsToList(String... permission) {
+        List<String> permissionList = new ArrayList<>();
         for (String value : permission) {
-            denyPermissions.add(value);
+            permissionList.add(value);
         }
-        return denyPermissions;
+        return permissionList;
     }
 
     public static <A extends Annotation> Method findMethodWithRequestCode(Class clazz,
