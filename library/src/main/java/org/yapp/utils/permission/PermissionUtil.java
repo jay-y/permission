@@ -196,7 +196,6 @@ public class PermissionUtil {
 
     private static void requestPermissions(Object obj, int requestCode, String[] permissions) {
         if (isOverMarshmallow()) {
-            onSuccess(obj, requestCode);
             if (permissions.length > 0) {
                 if (obj instanceof Activity) {
                     ((Activity) obj).requestPermissions(permissions, requestCode);
