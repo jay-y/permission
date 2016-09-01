@@ -3,7 +3,7 @@
 (An Android authorization tool suite,please refer to 'app' or [yApp](https://github.com/Jay-Y/yApp).)
 #### When you use Gradle to build a dependency can be added to:
 ```javascript
-compile 'com.github.jay-y:permission:1.0.0'
+compile 'com.github.jay-y:permission:1.0.1'
 ```
 ## About Me
 #### GitHub: https://github.com/Jay-Y
