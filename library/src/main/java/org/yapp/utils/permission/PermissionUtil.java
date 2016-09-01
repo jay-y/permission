@@ -5,8 +5,10 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Binder;
 import android.os.Build;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -22,7 +24,7 @@ import java.util.List;
  * @since JDK 1.7
  */
 public class PermissionUtil {
-    private static final String TAG = PermissionUtil.class.getSimpleName();
+    private static final String TAG = "PermissionUtil";
 
     public static final int PERMISSIONS_REQUEST_CODE = 1314520;
 
@@ -118,15 +120,18 @@ public class PermissionUtil {
      */
     public static boolean check(Context context, String... premissions) {
         try {
+            if(null == context)
+                throw new RuntimeException("Context is null.");
             for (int i = 0; i < premissions.length; i++) {
                 Integer check = context.checkPermission(premissions[i],
-                        android.os.Process.myPid(), android.os.Process.myUid());
-                if (null == check || check == -1) {
+                        Binder.getCallingPid(), Binder.getCallingUid());
+                if (check == -1) {
                     return false;
                 }
             }
             return true;
         } catch (Exception e) {
+            Log.e(TAG,e.getMessage(),e);
             return false;
         }
     }

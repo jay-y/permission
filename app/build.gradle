@@ -22,6 +22,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.github.jay-y:yapp:2.0.5'
+    compile 'com.github.jay-y:yapp:2.0.6'
     compile project(':library')
 }
